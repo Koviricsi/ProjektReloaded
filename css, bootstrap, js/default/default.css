@@ -1,0 +1,253 @@
+:root {
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(85, 85, 85);
+  --darkyellow: rgb(140, 150, 0);
+  --yellow: rgb(255, 255, 0);
+}
+
+* {
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--darkyellow);
+}
+
+::-moz-selection {
+  background: var(--white);
+  filter: invert(1);
+}
+
+::selection {
+  background: var(--white);
+  filter: invert(1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--black);
+}
+body header {
+  height: 40vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  box-shadow: inset 0 -1rem 3rem -1rem var(--white);
+}
+body header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background: url(../../src/img/aviciihead.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  filter: grayscale(1);
+  z-index: -1;
+}
+body header div:first-child {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+body header div:first-child img {
+  width: 50%;
+  filter: invert(1);
+}
+body header div:last-child {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+body header div:last-child h1 {
+  font-size: clamp(14px, 4vw, 100px);
+  font-family: "Caveat", cursive;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: var(--yellow);
+}
+body header div:last-child h1 i {
+  font-size: 90%;
+}
+body #nav {
+  position: sticky;
+  top: 0;
+}
+body nav {
+  width: 100%;
+  height: 10vh;
+  border-top: 0.1rem solid var(--white);
+  background: var(--black);
+  display: flex;
+}
+body nav div:first-child {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: 0.01rem solid var(--white);
+}
+body nav div:first-child img {
+  margin-left: clamp(10px, 2vw, 30px);
+  height: 90%;
+  animation: none;
+}
+body nav div:last-child {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+body nav div:last-child a {
+  text-decoration: none;
+  color: var(--white);
+  margin: 0;
+  border-bottom: 0.01rem solid var(--white);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(20px, 2vw, 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+body nav div:last-child a:hover, body nav div:last-child a:active, body nav div:last-child a:focus {
+  border-bottom: 0.15rem solid var(--yellow);
+  transition: all 0.2s;
+  box-shadow: inset 0 -15px 15px -15px var(--yellow);
+  color: var(--yellow);
+}
+body nav div:last-child a:nth-child(1) {
+  animation: navborder 3s alternate 0s infinite ease-in-out none;
+}
+body nav div:last-child a:nth-child(2) {
+  border-left: 0.1rem solid var(--white);
+  border-right: 0.1rem solid var(--white);
+  animation: navborder2 3s alternate 1s infinite ease-in-out none;
+}
+body nav div:last-child a:nth-child(3) {
+  animation: navborder 3s alternate 2s infinite ease-in-out none;
+}
+
+@keyframes navlogo {
+  0% {
+    height: 90%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes navborder {
+  0% {
+    border-bottom: 0.01rem solid var(--white);
+  }
+  100% {
+    border-bottom: 0.01rem solid var(--yellow);
+  }
+}
+@keyframes navborder2 {
+  0% {
+    border-bottom: 0.01rem solid var(--white);
+    border-left: 0.1rem solid var(--white);
+    border-right: 0.1rem solid var(--white);
+  }
+  100% {
+    border-bottom: 0.01rem solid var(--yellow);
+    border-left: 0.1rem solid var(--yellow);
+    border-right: 0.1rem solid var(--yellow);
+  }
+}
+@media screen and (max-width: 768px) {
+  body header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body header div:first-child {
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+  }
+  body header div:first-child img {
+    width: 100%;
+  }
+  body header div:last-child {
+    justify-content: center;
+    align-items: center;
+  }
+  body header div:last-child h1 {
+    font-size: clamp(20px, 5vw, 40px);
+  }
+  body header::before {
+    content: "";
+    background: none;
+  }
+  body nav {
+    border-bottom: 0.01rem solid var(--white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body nav div:first-child {
+    cursor: pointer;
+    justify-content: center;
+    height: 10vh;
+    transform: translateY(149.5%);
+    border-bottom: none;
+  }
+  body nav div:first-child img {
+    animation: navlogo 0.7s alternate infinite ease-in-out;
+  }
+  body nav div:last-child {
+    transition: 0.2s all;
+    flex-direction: column;
+    transform: translateY(50%) translateX(-100vw);
+  }
+  body nav div:last-child a {
+    height: 10vh;
+    width: 100vw;
+    border-bottom: none;
+  }
+  body nav div:last-child a:nth-child(1) {
+    animation: none;
+  }
+  body nav div:last-child a:nth-child(2) {
+    border-left: none;
+    border-right: none;
+    animation: none;
+  }
+  body nav div:last-child a:last-child {
+    border-bottom: 0.01rem solid var(--white);
+    animation: none;
+  }
+  body nav div:last-child.active {
+    transform: translateY(50%) translateX(0px);
+  }
+}/*# sourceMappingURL=default.css.map */
