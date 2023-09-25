@@ -29,6 +29,7 @@
   text-shadow: 3px 3px 5px var(--grey);
 }
 #content form:first-child label {
+  font-size: 1rem;
   text-shadow: 2px 2px 5px var(--grey);
 }
 #content form:first-child input, #content form:first-child select, #content form:first-child textarea {
