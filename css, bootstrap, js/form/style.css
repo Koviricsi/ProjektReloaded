@@ -1,0 +1,49 @@
+:root {
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(85, 85, 85);
+  --darkyellow: rgb(140, 150, 0);
+  --yellow: rgb(255, 255, 0);
+}
+
+#content {
+  color: var(--white);
+  z-index: -1;
+  background: url(../../src/img/avicii-wallpaper.jpg);
+  background-position: center;
+}
+#content form:first-child {
+  background: url(../../src/img/avicii-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.2rem solid var(--white);
+  border-radius: 1.5rem;
+  font-family: "Acme", sans-serif;
+}
+#content form:first-child div:first-child {
+  text-align: center;
+}
+#content form:first-child div:first-child h1 {
+  font-size: clamp(50px, 4vw, 120px);
+  text-shadow: 3px 3px 5px var(--grey);
+}
+#content form:first-child label {
+  text-shadow: 2px 2px 5px var(--grey);
+}
+#content form:first-child input, #content form:first-child select, #content form:first-child textarea {
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--grey);
+}
+#content form:first-child textarea {
+  width: 100%;
+}
+#content form:last-child {
+  background: url(../../src/img/avicii-background3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.2rem solid var(--white);
+  border-radius: 1.5rem;
+  font-family: "Acme", sans-serif;
+}/*# sourceMappingURL=style.css.map */
