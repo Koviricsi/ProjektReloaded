@@ -82,7 +82,7 @@ table{
     }
     
     .narancs_sziu_jelolo_amit_a_tablazat_th_szovegei_szinenek_a_megvaltoztatasara_van{
-        color: orange;
+        color: var(--yellow);
         padding: 2%;
         font-size: clamp(20px, 3vw, 60px);
     }
@@ -102,26 +102,21 @@ table{
 }
 
 
-@media screen and (max-width: 800px) {
-    .szoveg{
-        margin: 0 5px;
-    }
-    .tablazat{
-      flex-direction: column;
-    }
-    .tab_kepek{
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .elete{
         flex-direction: column;
     }
+    .szoveg{
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
     .kep1{
-        height: clamp(250px, 25vw, 350px);
+        height: 40vw;
     }
     .kep2{
-        height: clamp(250px, 25vw, 350px);
+        height: 35vw;
     }
 }
