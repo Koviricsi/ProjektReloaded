@@ -1,2 +1,2 @@
 # ProjektReloaded
-https://koviricsi.github.io/ProjektReloaded/form.html
+https://koviricsi.github.io/ProjektReloaded/index.html
