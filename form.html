@@ -8,10 +8,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@500&family=Fira+Sans+Condensed:wght@300&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@500&family=Exo&family=Fira+Sans+Condensed:wght@300&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 
-
-    
     <link rel="stylesheet" href="css, bootstrap, js/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css, bootstrap, js/default/default.css">
     <link rel="stylesheet" href="css, bootstrap, js/form/style.css">
@@ -31,41 +29,41 @@
                 <img src="src/img/Avicii_-_Logo.png" onclick="navMenu()">
             </div>
             <div id="navbar">
-                <a href="#" class="navlink">Kezdőlap</a>
-                <a href="#" class="navlink">Lyrics</a>
+                <a href="index.html" class="navlink">Kezdőlap</a>
+                <a href="music.html" class="navlink">Lyrics</a>
                 <a href="form.html" class="navlink">Jelentkezés</a>
             </div>
         </nav>
     </div>
-    <div id="content" class="row p-5">
-        <form class="col-xl-6 col-lg-6 col-md-6 col-sm-12 p-3 row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12"><h1>Jelentkezés a rajongói klubba</h1></div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 flex-column row"><label for="firstn" class="">Keresztnév</label>
+    <div id="content">
+        <form id="form1">
+            <h1>Jelentkezés a rajongói klubba</h1>
+            <div><label for="firstn">Keresztnév</label>
             <input id="firstn" type="text" name="firstn" required></div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 flex-column row"><label for="lastn">Vezetéknév</label>
+            <div><label for="lastn">Vezetéknév</label>
             <input id="lastn" type="text" name="lastn" required></div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 flex-column row"><label for="email">Email</label>
+            <div><label for="email">Email</label>
             <input id="email" type="email" name="email" required></div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 flex-column row"><label for="phone">Telefonszám</label>
+            <div><label for="phone">Telefonszám</label>
             <input id="phone" type="tel" name="phone" required pattern="[0-9]{2} [0-9]{2} [0-9]{3} [0-9]{4}|[0-9]{11}|+[0-9]{11}|[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}|+[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}"></div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 flex-column row"><label for="bday">Születésnap</label>
+            <div><label for="bday">Születésnap</label>
             <input id="bday" type="date" name="bday" required></div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 flex-column row"><label for="gender">Nem</label>
+            <div><label for="gender">Nem</label>
             <select id="gender" name="gender">
                 <option value="m">Férfi</option>
                 <option value="m">Nő</option>
                 <option value="m">Egyéb</option>
                 <option value="m">Inkább nem adom meg</option>
             </select></div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"><label for="message">Megjegyzés</label>
+            <div><label for="message">Megjegyzés</label>
             <textarea id="message" name="message" rows="5" cols="30" placeholder="Kérjük mondja el, miért szeretne csatlakozni közösségünkhöz"></textarea></div>
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-5 text-center"><input id="submit" type="submit" name="submit" value="Jelentkezés"></div>
+            <div><input id="submit" type="submit" name="submit" value="Jelentkezés"></div>
         </form>
-        <form class="col-xl-6 col-lg-6 col-md-6 col-sm-12 p-3">
+        <form>
             <h1>Hírlevél</h1>
-            <p>Amennyiben szeretne értesítéseket kapni az oldal, illetve a klubbal kapcsolatos változásokról, kérjük, adja meg email címét:</p>
-            <input id="mail" type="email" name="mail">
-            <input id="subscribe" type="submit" name="subscribe" value="Feliratkozok a hírlevélre">
+            <div><p>Amennyiben szeretne értesítéseket kapni az oldal, illetve a klubbal kapcsolatos változásokról, kérjük, adja meg email címét:</p></div>
+            <div><input id="mail" type="email" name="mail" placeholder="példa@példa.hu" required></div>
+            <div><input id="subscribe" type="submit" name="subscribe" value="Feliratkozok a hírlevélre"></div>
         </form>
     </div>
 </body>

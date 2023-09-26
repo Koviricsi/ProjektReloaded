@@ -29,6 +29,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: var(--yellow);
+  border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb:active {
@@ -100,6 +101,7 @@ body header div:last-child h1 i {
 body #nav {
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 body nav {
   width: 100%;
@@ -125,6 +127,7 @@ body nav div:last-child {
   width: 60%;
   display: flex;
   align-items: center;
+  background: var(--black);
 }
 body nav div:last-child a {
   text-decoration: none;
@@ -253,6 +256,6 @@ body nav div:last-child a:nth-child(3) {
     animation: none;
   }
   body nav div:last-child.active {
-    transform: translateY(50%) translateX(0px);
+    transform: translateY(50%) translateX(-2px);
   }
 }/*# sourceMappingURL=default.css.map */

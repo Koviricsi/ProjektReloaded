@@ -1,0 +1,127 @@
+:root{
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --grey: rgb(85, 85, 85);
+    --darkyellow: rgb(140, 150, 0);
+    --yellow: rgb(255, 255, 0);
+}
+
+
+*{
+    transition: all 0.1s;
+    z-index: 1;
+    position: relative;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+#content{
+    background: url(../../src/img/avicii-background6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.szoveg h1{
+    color: yellow;
+    margin: 0;
+}
+
+.szoveg h2{
+    color: orange;
+    margin: 0;
+}
+
+.szoveg p{
+    color: white;
+    margin: 0;
+}
+
+.elete{
+    display: flex;
+    flex-direction: row;
+    margin: 3vw;
+    gap: 5vw;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+    .szoveg{
+        display: flex;
+        flex-direction: column;
+        gap: 0vw;
+        font-size: clamp(12.5px, 3vw, 22.5px);
+        font-family: 'Mooli', sans-serif;
+    }
+
+    .kep1{
+        height: clamp(250px, 25vw, 250px);
+        border: var(--white) solid 0.1rem;
+        border-radius: 1rem;
+    }
+    .kep2{
+        height: clamp(250px, 25vw, 180px);
+        border: var(--white) solid 0.1rem;
+        border-radius: 2rem;
+    }
+
+table{
+    padding: 2rem;
+    font-size: clamp(15px, 2.5vw, 30px);
+    color: white;
+    text-align: center;
+    width: 100%;
+    border: 3px solid white;
+}
+    td{
+        padding: 1%;
+        border-top: 2px solid white;
+    }
+    
+    .narancs_sziu_jelolo_amit_a_tablazat_th_szovegei_szinenek_a_megvaltoztatasara_van{
+        color: orange;
+        padding: 2%;
+        font-size: clamp(20px, 3vw, 60px);
+    }
+
+.tablazat{
+    display: flex;
+    flex-direction: row;
+    margin: 5vw;
+    gap: 5vw;
+    justify-content: center;
+}
+
+.tab_kepek{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+
+@media screen and (max-width: 800px) {
+    .szoveg{
+        margin: 0 5px;
+    }
+    .tablazat{
+      flex-direction: column;
+    }
+    .tab_kepek{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .elete{
+        flex-direction: column;
+    }
+    .kep1{
+        height: clamp(250px, 25vw, 350px);
+    }
+    .kep2{
+        height: clamp(250px, 25vw, 350px);
+    }
+}

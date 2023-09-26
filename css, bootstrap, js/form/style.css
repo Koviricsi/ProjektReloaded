@@ -10,41 +10,77 @@
   color: var(--white);
   z-index: -1;
   background: url(../../src/img/avicii-wallpaper.jpg);
-  background-position: center;
-}
-#content form:first-child {
-  background: url(../../src/img/avicii-background.png);
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  border: 0.2rem solid var(--white);
-  border-radius: 1.5rem;
-  font-family: "Acme", sans-serif;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 20px);
 }
-#content form:first-child div:first-child {
+#content form {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: clamp(400px, (100% - 2rem) / 2, 1000px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(20px, 2vw, 60px);
+  gap: 1vh;
+  background: url(../../src/img/avicii-background6.png);
+  background-size: cover;
+  background-position: center;
+  border: 0.8vw solid var(--white);
+  border-radius: 2rem;
+  font-size: clamp(20px, 1.2vw, 60px);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#content form h1 {
+  font-size: clamp(35px, 4vw, 120px);
   text-align: center;
 }
-#content form:first-child div:first-child h1 {
-  font-size: clamp(50px, 4vw, 120px);
-  text-shadow: 3px 3px 5px var(--grey);
+#content form textarea {
+  width: 70%;
+  padding: 0.4rem;
 }
-#content form:first-child label {
-  font-size: 1rem;
-  text-shadow: 2px 2px 5px var(--grey);
-}
-#content form:first-child input, #content form:first-child select, #content form:first-child textarea {
+#content form input, #content form select, #content form textarea {
   border-radius: 0.5rem;
-  border: 0.2rem solid var(--grey);
+  border: 0.1rem solid var(--white);
 }
-#content form:first-child textarea {
-  width: 100%;
+#content form input[type=submit] {
+  font-weight: bold;
+}
+#content form div {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 calc(50% - 10px);
+}
+#content form div:last-child {
+  flex: 1 1 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content form div:last-child input {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 #content form:last-child {
-  background: url(../../src/img/avicii-background3.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 0.2rem solid var(--white);
-  border-radius: 1.5rem;
-  font-family: "Acme", sans-serif;
+  gap: 2vh;
+  background: url(../../src/img/avicii-background.png);
+}
+#content form:last-child div {
+  flex: 1 1 100%;
 }/*# sourceMappingURL=style.css.map */

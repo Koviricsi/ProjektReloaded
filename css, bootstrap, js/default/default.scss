@@ -34,6 +34,7 @@ html{
 
 ::-webkit-scrollbar-thumb{
     background: var(--yellow);
+    border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb:active{
@@ -111,6 +112,7 @@ body{
     #nav{
         position: sticky;
         top: 0;
+        z-index: 100;
     }
 
     nav{
@@ -138,6 +140,7 @@ body{
             width: 60%;
             display: flex;
             align-items: center;
+            background: var(--black);
             a{
                 text-decoration: none;
                 color: var(--white);
@@ -271,7 +274,7 @@ body{
                 }
             }
             div:last-child.active{
-                transform: translateY(50%) translateX(0px);
+                transform: translateY(50%) translateX(-2px);
             }
         }
 
