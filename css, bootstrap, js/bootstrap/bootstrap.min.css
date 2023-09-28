@@ -616,6 +616,7 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin-top: 5%;
 }
 
 .no-gutters {
